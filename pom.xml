@@ -10,8 +10,22 @@
   <name>base-tools</name>
   <url>http://maven.apache.org</url>
 
+  <distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <name>Nexus Release Repository</name>
+      <url>${nexus.release}</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <name>Nexus Snapshot Repository</name>
+      <url>${nexus.snapshot}</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <nexus.release>http://127.0.0.1:8994/nexus/content/repositories/releases/</nexus.release>
+    <nexus.snapshot>http://127.0.0.1:8994/nexus/content/repositories/snapshots/</nexus.snapshot>
   </properties>
 
   <dependencies>
